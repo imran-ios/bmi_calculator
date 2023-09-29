@@ -1,9 +1,11 @@
+import 'package:bmi_calculator/reuseable_card.dart';
 import 'package:flutter/material.dart';
 
 class InputPage extends StatefulWidget {
   const InputPage({super.key, required this.title});
 
   final String title;
+  final Color tileColor = const Color(0xff1e1d33);
 
   @override
   State<InputPage> createState() => _InputPageState();
@@ -22,55 +24,27 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: Container(
-                    margin: const EdgeInsets.all(15),
-                    decoration: BoxDecoration(
-                      color: const Color(0xff1e1d33),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
+                  child: ReusableCard(
+                    colour: widget.tileColor,
                   ),
                 ),
                 Expanded(
-                  child: Container(
-                    margin: const EdgeInsets.all(15),
-                    decoration: BoxDecoration(
-                      color: const Color(0xff1e1d33),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                  ),
+                  child: ReusableCard(colour: widget.tileColor),
                 )
               ],
             ),
           ),
           Expanded(
-            child: Container(
-              margin: const EdgeInsets.all(15),
-              decoration: BoxDecoration(
-                color: const Color(0xff1e1d33),
-                borderRadius: BorderRadius.circular(10),
-              ),
-            ),
+            child: ReusableCard(colour: widget.tileColor),
           ),
           Expanded(
             child: Row(
               children: [
                 Expanded(
-                  child: Container(
-                    margin: const EdgeInsets.all(15),
-                    decoration: BoxDecoration(
-                      color: const Color(0xff1e1d33),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                  ),
+                  child: ReusableCard(colour: widget.tileColor),
                 ),
                 Expanded(
-                  child: Container(
-                    margin: const EdgeInsets.all(15),
-                    decoration: BoxDecoration(
-                      color: const Color(0xff1e1d33),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                  ),
+                  child: ReusableCard(colour: widget.tileColor),
                 )
               ],
             ),
